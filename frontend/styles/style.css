@@ -9,7 +9,6 @@
 */
 
 /* GLOBAL RESET */
-
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +34,6 @@ body {
 }
 
 /* NAVIGATION – MOBILE FIRST */
-
 .mobile-nav {
     background: #1a1a1a;
     padding: 10px;
@@ -74,27 +72,54 @@ body {
 }
 
 /* DESKTOP NAV HIDDEN ON MOBILE */
-
 .desktop-nav {
     display: none;
 }
 
-/* HERO */
-.hero {
-    padding: 60px 25px;
-    text-align: center;
-    background: rgb(235, 228, 209);
-    color: #000;
+/* HERO SECTION WITH STAFF BACKGROUND */
+.hero.with-bg {
+    position: relative;
+    width: 100%;
+    min-height: 40vh;          /* Reduced height */
+    display: flex;
+    align-items: flex-end;     /* Move overlay to bottom */
+    background-color: #000;
+    background-image: url("../../sources/images/staff.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-bottom: 0;
 }
 
-.hero h1 {
-    font-size: 2rem;
-    font-weight: bold;
+/* FULL-WIDTH GLASS BLUR PANEL WITH FADE */
+.hero-overlay {
+    width: 100%;
+    padding: 18px 0px;             /* Shorter height */
+    text-align: center;
+    color: rgb(235, 228, 209);
+
+    /* Blur layer */
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.55) 0%,      /* Fully visible at bottom */
+        rgba(0, 0, 0, 0.0) 100%      /* Fades out at top */
+    );
+    backdrop-filter: blur(7px);
+
+    border-radius: 0;
+}
+
+
+.hero-overlay h1 {
     margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.hero-overlay p {
+    font-size: 1.1rem;
 }
 
 /* CONTENT BLOCKS */
-
 .content-block {
     padding: 40px 20px;
     border-bottom: 1px solid #1a1a1a;
@@ -116,7 +141,6 @@ footer {
 /* ======================
  DESKTOP STYLES
  ====================== */
-
 @media (min-width: 800px) {
 
     /* Desktop Navigation */
@@ -149,14 +173,25 @@ footer {
     }
 
     /* Larger hero */
-    .hero {
-        padding: 100px 15%;
+@media (min-width: 800px) {
+    .hero.with-bg {
+        min-height: 55vh;  /* Short but slightly larger on desktop */
+        background-size: contain;
     }
 
-    /* Content layout */
-    .content-block {
-        max-width: 900px;
-        margin: auto;
-        padding: 60px 0;
+    .hero-overlay {
+        padding: 28px 60px;
+        backdrop-filter: blur(8px);
     }
+
+
+
+    .hero-overlay h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1.3rem;
+    }
+}
 }
