@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html.pages-home {
+    background-color: rgb(0, 0, 0);
+   
+}
+
+.nav{
+    background-color: rgb(235, 228, 209);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    height: 90px;
+    color: rgb(0, 0, 0);
+}
+
+.nav section{
+    margin-left: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    border: 1px, solid, rgb(0, 0, 0);
+}
