@@ -1,23 +1,75 @@
 <!DOCTYPE html>
-
-<html class="pages-home">
-
+<html lang="en">
 <head>
-    <title>Cactus Jacks</title>
-    <link rel="stylesheet" href="../styles/style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cactus Jack's – Country Restaurant & Bar</title>
+<link rel="stylesheet" href="../styles/style.css" />
 </head>
-
 <body>
 
-    <div class="nav">
-        <img src="../../sources/images/Cactus-Jack-logo.webp" height="100%">
-        <div class="dropdown">
-            <section>
-                <p>Location {}</p>
-            </section>
-        </div>
-    </div>
+<header class="site-header">
+    <img src="../../sources/images/Cactus-Jack-logo.webp" alt="Cactus Jack's Logo" class="logo">
+</header>
+
+<nav class="mobile-nav">
+    <button id="menu-toggle">☰</button>
+    <ul id="menu-items">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Live Music</a></li>
+        <li><a href="#">Location</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<nav class="desktop-nav">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Live Music</a></li>
+        <li><a href="#">Location</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Country Food. Cold Drinks. Good People.</h1>
+    <p>Welcome to Cactus Jack’s – Your new favorite hangout.</p>
+</section>
+
+<section class="content-block">
+    <h2>Welcome</h2>
+    <p>
+        Enjoy authentic country cooking, ice-cold drinks, and live entertainment 
+        in a warm Western atmosphere.
+    </p>
+</section>
+
+<section class="content-block alt">
+    <h2>Our Food</h2>
+    <p>Slow-cooked BBQ, flame-grilled steaks, and homemade favorites.</p>
+</section>
+
+<section class="content-block">
+    <h2>Live Music</h2>
+    <p>
+        Catch live country bands every weekend – boots and hats optional!
+    </p>
+</section>
+
+<footer>
+    © 2025 Cactus Jack’s – All Rights Reserved
+</footer>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu-items");
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
+</script>
 
 </body>
-
 </html>

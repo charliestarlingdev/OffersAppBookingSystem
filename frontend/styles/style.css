@@ -1,27 +1,162 @@
+/* ======================
+ COLOR PALETTE
+ ====================== 
+ Black: #000
+ Dark Gray: #1a1a1a
+ Accent Red: #b61017
+ Accent Yellow: #ffd500
+ Neutral Tan: rgb(235, 228, 209)
+*/
+
+/* GLOBAL RESET */
+
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html.pages-home {
-    background-color: rgb(0, 0, 0);
-   
+body {
+    font-family: "Arial", sans-serif;
+    background: #000;
+    color: rgb(235, 228, 209);
+    line-height: 1.6;
 }
 
-.nav{
-    background-color: rgb(235, 228, 209);
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+/* HEADER */
+.site-header {
+    text-align: center;
+    padding: 20px;
+    background: #1a1a1a;
+}
+
+.site-header .logo {
+    max-width: 180px;
+}
+
+/* NAVIGATION – MOBILE FIRST */
+
+.mobile-nav {
+    background: #1a1a1a;
     padding: 10px;
-    height: 90px;
-    color: rgb(0, 0, 0);
+    position: relative;
 }
 
-.nav section{
-    margin-left: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 20px;
-    border: 1px, solid, rgb(0, 0, 0);
+.mobile-nav #menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: rgb(235, 228, 209);
+}
+
+.mobile-nav ul {
+    list-style: none;
+    display: none;
+    margin-top: 10px;
+}
+
+.mobile-nav ul.open {
+    display: block;
+}
+
+.mobile-nav li {
+    padding: 10px 0;
+}
+
+.mobile-nav a {
+    color: rgb(235, 228, 209);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.mobile-nav a:hover {
+    color: #ffd500;
+}
+
+/* DESKTOP NAV HIDDEN ON MOBILE */
+
+.desktop-nav {
+    display: none;
+}
+
+/* HERO */
+.hero {
+    padding: 60px 25px;
+    text-align: center;
+    background: rgb(235, 228, 209);
+    color: #000;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* CONTENT BLOCKS */
+
+.content-block {
+    padding: 40px 20px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.content-block.alt {
+    background: #1a1a1a;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #1a1a1a;
+    font-size: 0.9rem;
+    color: rgb(235, 228, 209);
+}
+
+/* ======================
+ DESKTOP STYLES
+ ====================== */
+
+@media (min-width: 800px) {
+
+    /* Desktop Navigation */
+    .mobile-nav {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: block;
+        background: #1a1a1a;
+        padding: 15px 0;
+    }
+
+    .desktop-nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+    }
+
+    .desktop-nav a {
+        color: rgb(235, 228, 209);
+        text-decoration: none;
+        font-size: 1.1rem;
+        position: relative;
+    }
+
+    .desktop-nav a:hover {
+        color: #ffd500;
+    }
+
+    /* Larger hero */
+    .hero {
+        padding: 100px 15%;
+    }
+
+    /* Content layout */
+    .content-block {
+        max-width: 900px;
+        margin: auto;
+        padding: 60px 0;
+    }
 }
